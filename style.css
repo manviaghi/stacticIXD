@@ -17,3 +17,7 @@ body {
   display: flex;
   justify-content: center;
 }
+
+.vis-div h2 {
+  margin-right: 10px;
+}
