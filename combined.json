@@ -1,0 +1,33 @@
+{
+  "width": 300,
+  "data": {
+    "values": [
+      {"area": "North", "sales": 5, "profit": 2},
+      {"area": "East", "sales": 25, "profit": 8},
+      {"area": "West", "sales": 15, "profit": 6},
+      {"area": "South", "sales": 20, "profit": 5},
+      {"area": "Central", "sales": 10, "profit": 3}
+    ]
+  },
+  "params": [
+    {
+      "name": "limit",
+      "value": 10,
+      "bind": {"input": "range", "min": 0, "max": 20, "step": 1}
+    }
+  ],
+  "transform": [{"filter": "datum.sales > limit"}],
+  "layer": [
+    {
+      "mark": "bar",
+      "encoding": {
+        "x": {"field": "area", "type": "N"},
+        "y": {"field": "sales", "type": "Q"}
+      }
+    },
+    {
+      "mark": {"type": "rule", "stroke": "red", "size": 3},
+      "encoding": {"y": {"field": "sales", "type": "Q", "aggregate": "mean"}}
+    }
+  ]
+}
