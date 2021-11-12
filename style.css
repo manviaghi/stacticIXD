@@ -1,3 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background: white;
+  margin: 0 auto;
+}
+
+.vis-div {
+  height: fit-content;
+  width: fit-content;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
 }
