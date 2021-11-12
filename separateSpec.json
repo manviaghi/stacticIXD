@@ -1,0 +1,26 @@
+{
+  "width": 300,
+  "height": 300,
+  "data": { "url": "dataRow.json"  },
+  "params": [
+    {
+      "name": "limit",
+      "value": 2,
+      "bind": {"input": "range", "min": 0, "max": 7, "step": 1}
+    }
+  ],
+  "transform": [{"filter": "datum.profit > limit"}],
+  "layer": [
+    {
+      "mark": "bar",
+      "encoding": {
+        "x": {"field": "area", "type": "N"},
+        "y": {"field": "profit", "type": "Q"}
+      }
+    },
+    {
+      "mark": {"type": "rule", "stroke": "red", "size": 3},
+      "encoding": {"y": {"field": "profit", "type": "Q", "aggregate": "mean"}}
+    }
+  ]
+}

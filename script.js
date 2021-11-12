@@ -28,4 +28,4 @@ vegaEmbed('#vis', spec);
 vegaEmbed('#vis2', 'bigFilterSpec.json');
 
 // For the third Spec
-vegaEmbed('#vis3', 'dataRow.json');
+vegaEmbed('#vis3', 'separateSpec.json');
