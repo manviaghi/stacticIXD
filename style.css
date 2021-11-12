@@ -5,6 +5,9 @@
 body {
   background: white;
   margin: 0 auto;
+  max-width: 1000px;
+  font-family: system-ui, sans-serif;
+  line-height: 1.45;
 }
 
 .vis-div {
